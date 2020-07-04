@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="a98-9A-VOO">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Ajx-2O-54Z" customClass="LoginViewController" customModule="Checkin_Teacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2r9-il-sds">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="4yt-4O-TSP">
+                                <rect key="frame" x="162" y="61" width="90" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="y7F-a4-F8p"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="LQa-cZ-dY4" customClass="GIDSignInButton">
+                                <rect key="frame" x="127" y="564.5" width="160" height="49"/>
+                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="n68-4Q-9xK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4yt-4O-TSP" firstAttribute="centerY" secondItem="Hke-UI-nUM" secondAttribute="centerY" multiplier="0.3" id="1AF-MW-fi7"/>
+                            <constraint firstItem="LQa-cZ-dY4" firstAttribute="centerX" secondItem="Hke-UI-nUM" secondAttribute="centerX" id="8IU-UX-mD8"/>
+                            <constraint firstItem="4yt-4O-TSP" firstAttribute="centerX" secondItem="Hke-UI-nUM" secondAttribute="centerX" id="9Z3-MM-bi0"/>
+                            <constraint firstItem="LQa-cZ-dY4" firstAttribute="width" secondItem="LQa-cZ-dY4" secondAttribute="height" multiplier="160:49" id="FY7-r5-FeD"/>
+                            <constraint firstItem="LQa-cZ-dY4" firstAttribute="centerY" secondItem="Hke-UI-nUM" secondAttribute="centerY" multiplier="1.3" id="jQJ-Un-9ei"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hke-UI-nUM"/>
+                    </view>
+                    <connections>
+                        <outlet property="googleSignButton" destination="LQa-cZ-dY4" id="VWl-AN-CVL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8AT-u0-711" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-255" y="-113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="150" height="150"/>
+    </resources>
+</document>

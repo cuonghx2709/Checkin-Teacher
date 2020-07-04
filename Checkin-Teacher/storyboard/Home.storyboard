@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Q7B-r8-Kgg">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="vUJ-Gy-qfv" customClass="HomeViewController" customModule="Checkin_Teacher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="tuu-uB-EfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ube-0T-nnH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3H-vz-rQc">
+                                <rect key="frame" x="328" y="760" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="JCK-gV-7iw"/>
+                                    <constraint firstAttribute="width" secondItem="c3H-vz-rQc" secondAttribute="height" multiplier="1:1" id="Qyf-74-Agq"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="addBtn"/>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="vUJ-Gy-qfv" eventType="touchUpInside" id="flk-ap-GNo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ube-0T-nnH" firstAttribute="bottom" secondItem="OYN-X0-evA" secondAttribute="bottom" id="5KP-rC-txu"/>
+                            <constraint firstItem="OYN-X0-evA" firstAttribute="top" secondItem="Ube-0T-nnH" secondAttribute="top" id="Agi-SV-eaV"/>
+                            <constraint firstItem="OYN-X0-evA" firstAttribute="trailing" secondItem="c3H-vz-rQc" secondAttribute="trailing" constant="16" id="H90-rU-Mq7"/>
+                            <constraint firstItem="OYN-X0-evA" firstAttribute="bottom" secondItem="c3H-vz-rQc" secondAttribute="bottom" constant="32" id="h5V-Ln-38V"/>
+                            <constraint firstItem="OYN-X0-evA" firstAttribute="trailing" secondItem="Ube-0T-nnH" secondAttribute="trailing" id="nQ2-Ff-wab"/>
+                            <constraint firstItem="Ube-0T-nnH" firstAttribute="leading" secondItem="OYN-X0-evA" secondAttribute="leading" id="q8P-V0-lpE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OYN-X0-evA"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Ube-0T-nnH" id="zFi-D2-Se8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Gv-FY-BTe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704.34782608695662" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addBtn" width="256" height="256"/>
+    </resources>
+</document>

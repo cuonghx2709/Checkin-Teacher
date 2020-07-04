@@ -1,0 +1,6 @@
+framework module Pods_Checkin_Teacher {
+  umbrella header "Pods-Checkin-Teacher-umbrella.h"
+
+  export *
+  module * { export * }
+}
